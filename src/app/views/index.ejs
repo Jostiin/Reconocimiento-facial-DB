@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="css/index.css">
+   
+    <script defer src="js/face-api.min.js" type="module"></script>
+    <script defer src="js/script.js"></script>
+    <title>CRUD</title>
+         <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+      
+        <a class="navbar-brand" href="/">
+          <img src="https://wide.ec/wp-content/uploads/2022/06/logo-widep.png" style="width:100px;" class="rounded-pill"> 
+        </a>
+        <form action="/admin" method="post" class="form__">
+          <button type="submit" class="btn btn-primary btn_admin"  >ADMIN</button>  
+        </form>
+        <form action="/panel-control" method="post" class="form__">
+          <button type="submit" class="btn btn-primary btn_admin">CONTROL</button>  
+        </form>
+      
+    </nav>
+
+    <% if(navbar==true) {%>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal body -->
+          <div class="modal-body">
+            No se ha podido identificar el ultimo rostro agregado.
+          </div>
+        </div>
+      </div>
+    <% } %>
+    
+    
+    <div class="videoStream">
+      <video id="videoInput" controls class="videoS" controls width="520p" height="300" ></video>
+    </div>
+    <div class="btns">
+      <form action="/save_succesfull" method="POST">
+          <button type="submit" class="btn btn-primary btn_iniciar" name="Iniciar" >Iniciar</button>  
+     
+          <button type="submit" class="btn btn-primary btn_finalizar" name="Finalizar" >Finalizar</button>  
+      
+      </form>
+          
+    </div>
+    
+</body>
+</html>
